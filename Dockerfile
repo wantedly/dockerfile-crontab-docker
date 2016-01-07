@@ -4,4 +4,6 @@ MAINTAINER Daisuke Fujita <dtanshi45@gmail.com> (@dtan4)
 RUN apk --update add docker && \
     rm -rf /var/cache/apk/*
 
-CMD ["crontab"]
+COPY docker-entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
