@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.3
+FROM gliderlabs/alpine:3.2
 MAINTAINER Daisuke Fujita <dtanshi45@gmail.com> (@dtan4)
 
 RUN apk --update add docker bash && \
