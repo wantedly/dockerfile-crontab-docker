@@ -13,4 +13,5 @@ before_script:
   - docker run -d --name $TARGET_CONTAINER_ID crontab
 
 script:
+  - docker -v
   - bundle exec rspec
