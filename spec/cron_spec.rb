@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe service('crond') do
+describe process('cron') do
   it { should be_running }
 end
