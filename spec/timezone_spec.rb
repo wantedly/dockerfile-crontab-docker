@@ -1,5 +1,4 @@
 require 'spec_helper'
-set :backend, :exec
 
 describe command('date') do
   its(:stdout) { should match /JST/ }
