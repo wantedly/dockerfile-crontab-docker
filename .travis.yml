@@ -9,9 +9,7 @@ env:
   - TARGET_CONTAINER_ID=container-crontab
 
 before_script:
-  - docker build -t crontab .
-  - docker run -d --name $TARGET_CONTAINER_ID crontab
-  - docker exec -it $TARGET_CONTAINER_ID docker -v
+  - docker build -t quay.io/wantedly/crontab-docker:latest .
 
 script:
-  - bundle exec rspec
+  - bundle exec rake spec
